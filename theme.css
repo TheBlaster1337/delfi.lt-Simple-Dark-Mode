@@ -1,3 +1,13 @@
+/* ==UserStyle==
+@name         delfi.lt - Simple Dark Mode
+@version      20260220.10.23
+@namespace    https://userstyles.world/user/TheBlaster1337
+@description  Might have some visual issues
+@author       TheBlaster1337
+@license      GNU GPLv3
+==/UserStyle== */
+
+@-moz-document domain("delfi.lt") {
 
 
 .banner--header {
@@ -8,47 +18,30 @@
     display: none;
 }
 #adf-banner {
-    z-index: 15000;
     display: none;
 }
 
 .banner--bottom, .banner--content, .banner--corner {
-    max-width: 1200px;
     display: none;
 }
 
 .banner--tower:not(:last-child) {
-    position: relative;
     display: none;
-    top: 0;
 }
 
 #bnrContent {
-    position: fixed;
     display: none;
-    top: 43px;
-    width: 1200px;
-    height: 120px;
 }
 
 #plius-promotion-line {
-    position: absolute;
     display: none;
-    top: 113px;
-    width: 100%;
-    z-index: 5;
 }
 
 .banner--tower {
-    margin-bottom: 20px;
-    position: sticky;
     display: none;
-    top: calc(var(--delfi-topbar-height) + 80px);
-    width: 300px;
 }
 
 .adform-adbox-fixed {
-    position: fixed;
     display: none;
 }
 
@@ -67,12 +60,7 @@
 }
 
 .adf-Banner {
-    position: absolute;
-    overflow: hidden;
-    cursor: pointer;
     display: none;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #fff;
 }
 
 .adf-ClickArea {
@@ -234,13 +222,9 @@ a{
 
 .banner--loading {
     display: none;
-    background: url(https://lt-production-portal-root.s3.delfi.lt/img/loading.6fcbc62.gif) 50% no-repeat;
-    background-color: #fafafa;
 }
 
 .banner--square>div {
     displaY: none;
-    background: #fafafa;
-    max-width: 676px;
-    padding: 7px 0 35px;
+}
 }
