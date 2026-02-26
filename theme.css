@@ -11,10 +11,6 @@
 
 
 .banner--header {
-    line-height: 0;
-    margin: 0 auto;
-    text-align: center;
-    width: 1200px;
     display: none;
 }
 #adf-banner {
@@ -35,6 +31,137 @@
 
 #plius-promotion-line {
     display: none;
+}
+
+.header-actions__item:first-child .header-actions__button {
+    margin-left: 0;
+    margin-right: 0;
+    border: 2px solid white;
+}
+
+.header-actions__button--contrast {
+    background: transparent;
+}
+.header-actions__button--contrast:hover {
+    background: var(--color-color-1);
+}
+
+
+.header-actions__button--login--logged-in,
+.header-actions__button--login--logged-out,
+.header-actions__button--placeholder {
+    background-color: transparent;
+    border-radius: 100px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+    gap: 10px;
+    padding: 10px 25px 10px 13px;
+
+    position: relative;
+    overflow: hidden;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.header-actions__button--login--logged-in::before,
+.header-actions__button--login--logged-out::before,
+.header-actions__button--placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-105%);
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.header-actions__button--login--logged-in > *,
+.header-actions__button--login--logged-out > *,
+.header-actions__button--placeholder > * {
+    position: relative;
+    z-index: 1;
+}
+
+.header-actions__button--login--logged-in:hover::before,
+.header-actions__button--login--logged-out:hover::before,
+.header-actions__button--placeholder:hover::before {
+    transform: translateX(0);
+}
+
+.header-actions__button--login--logged-in::before,
+.header-actions__button--login--logged-out::before,
+.header-actions__button--placeholder::before {
+    background: var(--color-color-1);
+}
+
+.header-actions__button--login--logged-in:hover,
+.header-actions__button--login--logged-out:hover,
+.header-actions__button--placeholder:hover {
+    color: white;
+    border-color: var(--color-color-1);
+}
+
+.hamburger--desktop[data-v-260a04b6] {
+    align-items: flex-start;
+    background: white;
+    filter: invert();
+    border-radius: 10px;
+    flex-direction: column;
+    height: 40px;
+    justify-content: center;
+    padding: 0 11px;
+    row-gap: 5px;
+    width: 40px;
+}
+
+.hamburger--desktop[data-v-260a04b6]:before {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+.hamburger--desktop[data-v-260a04b6]:hover {
+    transform:scale(1.15) rotate(-8deg);
+}
+
+.header-actions__item--search i {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
+    position: relative;
+    transition:
+        transform 0.3s cubic-bezier(.4,0,.2,1),
+        color 0.3s ease;
+}
+
+.header-actions__item--search i::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.header-actions__item--search:hover i {
+    transform: scale(1.15) rotate(-8deg);
+    color: #5f78ff;
+}
+
+.header-actions__item--search:hover i::before {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.header__logo {
+    display: inline-block;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.header__logo:hover {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 10px rgba(56, 88, 245, 0.5));
 }
 
 .banner--tower {
